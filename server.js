@@ -41,12 +41,14 @@ function sendData(req, res) {
 // POST Route
 // Callback function to complete POST '/add'
 const data = [];
-app.post('/add', addInfo)
+app.post('/add', addInfo);
+
 function addInfo(req, res) {
     projectData['date'] = req.body.date;
     projectData['temp'] = req.body.temp;
     projectData['content'] = req.body.content;
-    data.push(projectData);
-};
+    res.send(projectData);
+    console.log(projectData)
+  }
 
 

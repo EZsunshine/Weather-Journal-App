@@ -34,7 +34,7 @@ function performAction(e){
         let date = new Date(userData.dt * 1000)
         let date_str = date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
         // add data to POST request
-        postData('/add', {'data': date_str, 'temp': userData.main.temp, 'content': content})
+        postData('/add', {'date': date_str, 'temp': userData.main.temp, 'content': content})
     })
     .then(function(){
         updateUI
@@ -56,7 +56,7 @@ const postData = async ( url = '', data = {}) => {
 
         try {
             const newData = await req.json();
-            console.log(newData);
+            console.log('ANTRAS');
             return newData;
         }catch(error) {
         console.log("error", error);
@@ -65,12 +65,12 @@ const postData = async ( url = '', data = {}) => {
 }
 
 // Update the UI
-const updateUI = async () =>{
+const updateUI = async () => {
     const request = await fetch('/all');
     try {
         // Transform into JSON
         const allData = await request.json();
-        console.log('TRECIAS')
+        console.log('TRECIAS');
         // show icons on the page
         icons.forEach(icon => icon.style.opacity = '1');
         // update new entry values
