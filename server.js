@@ -22,7 +22,7 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-const port = 8000;
+const port = 2000;
 // Setup Server
 const server = app.listen(port, listening);
 // Callback to debug
