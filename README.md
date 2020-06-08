@@ -1,6 +1,7 @@
 # Weather-Journal App Project
 
-## Overview
+## Project 3 - Weather Journal App
+#### What I used: HTML, CSS, Javascript (Vanilla)
 This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
 
 ## Instructions
